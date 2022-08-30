@@ -17,3 +17,8 @@ jobs:
         echo "내 이름은 $NAME 입니다."
         echo "내 이름은 $NAME, 내 아이디는 $ID 입니다."
         echo "내 이름은 $NAME, 내 아이디는 $ID 입니다. 제 나이는 $AGE이고, 휴먼 : $HUMAN 입니다."
+    - name: Hello world action
+      with: # Set the secret as an input
+        super_secret: ${{ secrets.SuperSecret }}
+      env: # Or as an environment variable
+        super_secret: ${{ secrets.SuperSecret }}
