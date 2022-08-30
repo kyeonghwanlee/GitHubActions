@@ -6,7 +6,7 @@ name: helloGithubAction
 on:
   schedule:
     - cron: '*/10 * * * *'
-
+#
 # 위 이벤트가 일어났을 경우 실행될 job, 여러개 설정 가능.
 jobs:
   # 작업 단위
