@@ -19,6 +19,8 @@ jobs:
     - uses: actions/checkout@v2
     # OS에서 실행할 이름
     - name: 1. 파일 목록 출력
-      run: ls
-    - name: 2. 파이썬 실행
+      run: ls -al
+    - name: 2. 설치되어 있는 패키지 확인
+      run: pip list
+    - name: 3. 파이썬 실행
       run: python test.py
