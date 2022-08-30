@@ -7,11 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Hello world action
-      with: # Set the secret as an input
-        super_secret: ${{ secrets.SuperSecret }}
-      env: # Or as an environment variable
-        super_secret: ${{ secrets.SuperSecret }}
     - name: 1. 변수출력
       env:
         NAME: 'hojun.lee'
