@@ -31,14 +31,14 @@ jobs:
       run: pip install -r requirements.txt
     - name: 5. 파이썬 실행
       run: python test.py
-    - name: Commit files
-      run: |
-        git config --local user.email "kyeonghean.lee@liveklass.com "
-        git config --local user.name "ruoghks"
-        git add .
-        git commit -m "Run crawler and update current data"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        # branch: "master"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+#    - name: Commit files
+#      run: |
+#        git config --local user.email "kyeonghean.lee@liveklass.com "
+#        git config --local user.name "ruoghks"
+#        git add .
+#        git commit -m "Run crawler and update current data"
+#    - name: Push changes
+#      uses: ad-m/github-push-action@master
+#      with:
+#        # branch: "master"
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
