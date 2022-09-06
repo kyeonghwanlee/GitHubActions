@@ -17,4 +17,12 @@ jobs:
         echo "내 이름은 $NAME 입니다."
         echo "내 이름은 $NAME, 내 아이디는 $ID 입니다."
         echo "내 이름은 $NAME, 내 아이디는 $ID 입니다. 제 나이는 $AGE이고, 휴먼 : $HUMAN 입니다."
+    - name: action-slack
+      uses: 8398a7/action-slack@v2.6.0
+      with:
+        status: ${{job.status}}
+        author_name: <#git>
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
 
